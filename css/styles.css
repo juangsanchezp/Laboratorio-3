@@ -1,0 +1,313 @@
+/* --------------------- VARIABLES GLOBALES --------------------- */
+:root {
+  --main-bg-color: #f9f9fc;
+  --header-bg-color: #2e3a59;
+  --footer-bg-color: #1b1b1b;
+  --nav-bg-color: #0d9488;
+  --primary-color: #0d9488;
+  --accent-color: #14b8a6;
+  --main-text-color: #333;
+  --primary-button-background-color: #0d9488;
+  --main-font: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  --shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* --------------------- RESETEO BÁSICO --------------------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--main-font);
+  background-color: var(--main-bg-color);
+  color: var(--main-text-color);
+  line-height: 1.6;
+}
+
+/* --------------------- HEADER --------------------- */
+header {
+  background: linear-gradient(to right, #6366f1, #4f46e5);
+  padding: 30px;
+  text-align: center;
+  color: white;
+  box-shadow: var(--shadow);
+}
+
+header h1 {
+  font-size: 2.5em;
+  font-weight: bold;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  transition: transform 0.5s ease;
+}
+
+header h1:active {
+  transform: rotate(5deg) scale(1.1) skewX(5deg) translateY(-5px);
+}
+
+/* --------------------- NAV --------------------- */
+nav {
+  display: flex;
+  justify-content: center;
+  background-color: var(--nav-bg-color);
+  padding: 10px 0;
+  gap: 15px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 10px 15px;
+  border-radius: 5px;
+  transition: background 0.3s;
+}
+
+nav a:hover,
+nav a:focus {
+  background-color: var(--accent-color);
+}
+
+/* --------------------- MAIN --------------------- */
+main {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 30px;
+  padding: 40px;
+}
+
+/* --------------------- FOOTER --------------------- */
+footer {
+  background-color: var(--footer-bg-color);
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+/* --------------------- FORMULARIO DE CONTACTO --------------------- */
+form.contact-form {
+  background-color: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: var(--shadow);
+}
+
+form.contact-form label {
+  display: block;
+  margin-top: 15px;
+  font-weight: bold;
+}
+
+form.contact-form input,
+form.contact-form textarea {
+  width: 100%;
+  padding: 12px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+form.contact-form button {
+  margin-top: 20px;
+  background-color: var(--primary-button-background-color);
+  color: white;
+  padding: 12px 30px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+form.contact-form button:hover {
+  background-color: #007f89;
+}
+
+/* --------------------- PERFIL / CONFIGURACIÓN --------------------- */
+.profile-settings {
+  background-color: #ffffff;
+  padding: 35px;
+  margin: 40px auto;
+  max-width: 800px;
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+}
+
+.profile-settings h2 {
+  font-size: 24px;
+  color: var(--primary-color);
+  margin-bottom: 20px;
+}
+
+.profile-settings h3 {
+  margin-top: 35px;
+  font-size: 20px;
+  color: var(--primary-color);
+  border-bottom: 2px solid var(--accent-color);
+  padding-bottom: 8px;
+}
+
+.profile-settings .profile-picture {
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.profile-settings .profile-picture img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 3px solid var(--accent-color);
+  box-shadow: var(--shadow);
+  transition: transform 0.3s ease;
+}
+
+.profile-settings .profile-picture img:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+.profile-settings .form-group {
+  margin-bottom: 20px;
+}
+
+.profile-settings label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 8px;
+  color: #444;
+}
+
+.profile-settings input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 16px;
+}
+
+/* --------------------- TABLAS --------------------- */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  background-color: white;
+  box-shadow: var(--shadow);
+}
+
+th {
+  background-color: var(--primary-color);
+  color: white;
+  padding: 15px;
+  font-weight: bold;
+  font-family: var(--main-font);
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+}
+
+td {
+  padding: 15px;
+  border-bottom: 1px solid #eee;
+}
+
+tr:hover {
+  background-color: #f1f1f1;
+}
+
+td img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  transition: transform 0.3s;
+}
+
+td img:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+/* --------------------- LISTAS --------------------- */
+ul, ol {
+  padding-left: 20px;
+  margin-bottom: 20px;
+}
+
+ul li, ol li {
+  margin-bottom: 8px;
+  list-style-type: square;
+}
+
+/* --------------------- BOTÓN FLOTANTE --------------------- */
+#chat-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: var(--primary-button-background-color);
+  color: white;
+  border: none;
+  border-radius: 50px;
+  padding: 12px 20px;
+  font-weight: bold;
+  cursor: pointer;
+  z-index: 1000;
+  box-shadow: var(--shadow);
+  animation: fadeIn 0.5s ease;
+}
+
+#chat-button:hover {
+  background-color: #007f89;
+}
+
+#chat-button:active {
+  animation: pulsate 1s ease;
+}
+
+/* --------------------- ANIMACIONES --------------------- */
+@keyframes pulsate {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.1);
+    opacity: 0.7;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* --------------------- TARJETAS DEL SIDEBAR --------------------- */
+.sidebar-card {
+  min-width: 250px;
+  word-wrap: break-word;
+  word-break: normal;
+  padding: 1rem;
+  font-size: 0.95rem;
+  border-radius: 8px;
+  box-shadow: var(--shadow);
+  background-color: white;
+}
+
+.sidebar-card h4 {
+  font-size: 1.1rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.sidebar-card ol,
+.sidebar-card ul {
+  padding-left: 1.2rem;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.sidebar-card li {
+  list-style-type: disc;
+  margin-bottom: 5px;
+}
